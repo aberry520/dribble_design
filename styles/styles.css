@@ -1,0 +1,57 @@
+header {
+    display: grid;
+    grid-template-areas: 
+        "logo nav"
+        "title title";
+}
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+}
+nav h3 {
+    margin: 5px;
+}
+.logo {
+    grid-area: logo;
+    align-self: flex-end;
+    justify-self: flex-start;
+    margin: 0
+    
+}
+.title{
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+    margin: 20%;
+}
+img {
+    max-width: 10rem;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    max-width: 1500px;
+}
+section{
+    height: 500px;
+    min-height: fit-content;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background-color: rgb(250,250,250);
+    box-shadow: 0 -1rem 2rem #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+section:nth-child(odd):hover {
+    transform: translate(50%, -50px) scale(2);
+}
+section:nth-child(even):hover {
+    transform: translate(-50%, -50px) scale(2);
+}
