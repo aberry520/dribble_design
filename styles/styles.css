@@ -1,8 +1,15 @@
+body {
+    min-width: 100vw;
+    margin: 0;
+    background-color: ;
+}
 header {
     display: grid;
     grid-template-areas: 
         "logo nav"
         "title title";
+    min-width: 100%;
+    margin: 0 auto;
 }
 nav {
     grid-area: nav;
@@ -31,11 +38,12 @@ img {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
     justify-items: center;
-    max-width: 1500px;
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
+    /* min-width: 100%; */
+    max-width: 80%;
+    margin: 0 auto;
+    column-gap: 10px;
 }
 section{
     height: 500px;
@@ -50,11 +58,22 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.2s;
+    transition: 0.35s;
 }
-section:nth-child(odd):hover {
-    transform: translate(50%, -50px) scale(2);
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    section {
+        transform: scale(.75);
+    }
+}
+/* animations only for hover devices */
+@media (hover:hover) {
+    section:nth-child(odd):hover {
+    transform: translate(50%, -50px) scale(1.5);
 }
 section:nth-child(even):hover {
-    transform: translate(-50%, -50px) scale(2);
+    transform: translate(-50%, -50px) scale(1.5);
+}
 }
