@@ -33,6 +33,9 @@ main {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     max-width: 1500px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
 }
 section{
     height: 500px;
