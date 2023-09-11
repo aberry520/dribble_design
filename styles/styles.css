@@ -21,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 .home {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 header {
     display: flex;
@@ -40,7 +40,7 @@ img {
 nav {
     display: flex;
     gap: 10%;
-    min-width: 500px;
+    /* min-width: 500px; */
     justify-content: flex-end;
     margin-right: 10px;
 }
@@ -51,7 +51,7 @@ main {
 
 }
 footer {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     min-width: 100vw;
 }
@@ -89,4 +89,30 @@ a {
     border-radius: 300px;
     bottom: 5vw;
     right: 10vw;
+}
+@media (max-width: 500px){
+    .welcome{
+        font-size: 5rem;
+        margin: 0;
+        margin-top: 2rem;
+    }
+    nav {
+        display: flex;
+        /* gap: 10%; */
+        /* min-width: 500px; */
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+/* about us page */
+.brothers {
+    min-height: 40rem;
+}
+.about-us main section h2{
+    font-size: 4rem;
+    position: absolute;
+    justify-self: center;
+}
+.about-us main section{
+    display: flex;
 }
