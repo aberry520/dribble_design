@@ -48,6 +48,7 @@ main {
     display: flex;
     /* align-items: flex-end; */
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 footer {
@@ -115,4 +116,17 @@ a {
 }
 .about-us main section{
     display: flex;
+}
+
+/* contact page */
+.contact main {
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 7%;
+}
+.contact main img {
+    position: absolute;
+    min-height: 20rem;
+    z-index: -1;
+    opacity: 50%;
 }
